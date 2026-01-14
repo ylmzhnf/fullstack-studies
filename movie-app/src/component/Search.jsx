@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Search = () => {
+const Search = ({searchTerm,setSearchTerm }) => {
+
     return (
-        <div>
-            <img src="../public/search.svg" alt="Search icon" />
+        <div className="search">
+            
+            <div> 
+                <img src="/search.svg" alt="Search icon"  />
+                <input 
+                    type="text" 
+                    placeholder="Search through thousands of movies"
+                    onChange={(e) =>{setSearchTerm(e.target.value);} }
+                    value={searchTerm} 
+                /> 
+                
+            </div>
         </div>
     )
 }
